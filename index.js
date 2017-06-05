@@ -4,6 +4,40 @@ const BUTCHER_PRODUCTS = [
   'Beef shin',
   'Ribeye'
 ];
+// const Sometimes = React.createElement("strong", {}, "right in front of you")
+class OlderCoaster extends React.Component {
+  render() {
+    return React.createElement('div', { className: 'oldercoaster' }, [
+      React.createElement('p', {}, 'Two grannies having the time of their life!'),
+      React.createElement('p', {}, 'Passengers:'),
+      React.createElement('ul', {}, [
+        React.createElement('li', {}, 'Agnes'),
+        React.createElement('li', {}, 'Muriel')
+      ])
+    ]);
+  }
+}
+
+class InFrontOfYou extends React.Component {
+  render() {
+    return React.createElement('div', {}, [
+      React.createElement('p', {}, `You shouldn't look too far.`),
+      React.createElement('p', {}, 'Sometimes, the solution is right in front of you.')
+    ]);
+  }
+}
+
+class ButcherShop extends React.Component {
+  render() {
+    return React.createElement('p', {}, "Hello! We have the following products for sale:"),
+      React.createElement('ul', {},
+        BUTCHER_PRODUCTS.map( product => Reacte.createElement("li", {}, product))
+      )
+
+        })
+  }
+
+
 
 ReactDOM.render(
   React.createElement('div', {}, [
